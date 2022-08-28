@@ -1,0 +1,25 @@
+<div class="custom-card" [ngStyle]="{ height: height, width: width }">
+  <div
+    class="card-inner rounded"
+    [ngClass]="{ 'rotate-card': rotated }"
+    [ngStyle]="{ padding: padding }"
+    (click)="rotated = !rotated"
+  >
+    <div
+      class="border border-dark border-3 border-opacity-75 rounded p-3 card-front"
+      [ngStyle]="style"
+    >
+      <h4 class="text-center">{{ title }}</h4>
+      <img class="img-fluid w-100" [src]="backgroudImage" [alt]="altText" />
+      <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+    <div class="card-back" [ngStyle]="style">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+        aliquam harum repellat tempore quia eum, ipsa cum dolorum dolorem
+        numquam ex obcaecati illum ducimus nostrum tempora eos, laborum sunt
+        molestiae?
+      </p>
+    </div>
+  </div>
+</div>
