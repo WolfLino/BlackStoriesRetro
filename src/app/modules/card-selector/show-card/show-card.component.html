@@ -1,0 +1,14 @@
+<div class="d-flex flex-column">
+  <h1 class="text-center mb-4">Como isso aconteceu?</h1>
+  <div class="w-100 justify-content-center d-flex">
+    <app-card-game *ngIf="card !== null" [frontImage]="card?.imagePath" [altText]="card?.altImageText"
+      [title]="card?.title" description="{{ card?.description }}" [hideDescription]="false" height="600px" width="400px"
+      [canRotate]="true" [canZoom]="false" [revealBack]="reveal" [backImage]="card?.backImagePath"
+      [backText1]="card?.backText1" [backText2]="card?.backText2"></app-card-game>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" [value]="reveal" (change)="reveal = !reveal"
+      id="revealBack" />
+    <label class="form-check-label" for="revealBack">Revelar parte de trás</label>
+  </div>
+</div>

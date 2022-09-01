@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-card-game',
@@ -6,12 +6,21 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./card-game.component.scss'],
 })
 export class CardGameComponent implements OnInit {
-  @Input() backgroudImage?: string;
+  @Input() frontImage?: string;
   @Input() width: string = '300px';
   @Input() height: string = '450px';
   @Input() padding: string = '0.85rem';
   @Input() title?: string;
-  @Input() altText: string = '';
+  @Input() altText?: string;
+  @Input() description: string = '';
+  @Input() hideDescription: boolean = false;
+  @Input() canRotate: boolean = true;
+  @Input() canZoom: boolean = false;
+  @Input() revealBack = true;
+  @Input() backText1?: string;
+  @Input() backText2?: string;
+  @Input() backImage?: string;
+  @Input() backAltText?: string;
 
   rotated: boolean = false;
   style = {

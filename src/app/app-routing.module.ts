@@ -1,10 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CardSelectorComponent } from './modules/card-selector/card-selector.component';
+import { ShowCardComponent } from './modules/card-selector/show-card/show-card.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'card-selector',
+    component: CardSelectorComponent,
+  },
+  {
+    path: 'card/:id',
+    component: ShowCardComponent,
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
