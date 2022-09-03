@@ -5,6 +5,11 @@ import { ShowCardComponent } from './modules/card-selector/show-card/show-card.c
 
 const routes: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'card-selector',
+  },
+  {
     path: 'card-selector',
     component: CardSelectorComponent,
   },

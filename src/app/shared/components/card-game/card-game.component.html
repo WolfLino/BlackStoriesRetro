@@ -1,19 +1,22 @@
 <div class="custom-card" [ngStyle]="{ height: height, width: width }"
-  [ngClass]="{ 'rotate-card': rotated && canRotate, zoom: canZoom }">
-  <div class="card-inner rounded" [ngStyle]="{ padding: padding }" (click)="rotated = !rotated">
-    <div class="border border-dark border-3 border-opacity-75 rounded p-3 card-front" [ngStyle]="style">
+  [ngClass]="{ 'rotate-card': rotated && canRotate, zoom: canZoom && !isStretched, stretch: isStretched }">
+  <div class="card-inner rounded" [ngStyle]="{ padding: padding }">
+    <button *ngIf="canStretch" class="zoom-btn card-front" (click)="isStretched = !isStretched">zoom</button>
+    <div class="border border-dark border-3 border-opacity-75 rounded p-3 card-front" [ngStyle]="style"
+      (click)="rotated = !rotated">
       <h2 class="fw-bold title">{{ title }}</h2>
       <img class="img-fluid w-100 mb-3" [src]="frontImage" [alt]="altText" />
       <p innerHTML="{{ !hideDescription ? description : null }}" class="text-card align-items-center"></p>
     </div>
     <div *ngIf="!revealBack; else cardBack" class="border border-dark border-3 border-opacity-75 rounded p-3 card-back"
-      [ngStyle]="style">
+      [ngStyle]="style" (click)="rotated = !rotated">
       <h2 class="fw-bold title">{{ title }}</h2>
       <img class="img-fluid w-100 mb-3" [src]="frontImage" [alt]="altText" />
       <p class="text-card align-items-center" innerHTML="{{ !hideDescription ? description : null }}"></p>
     </div>
     <ng-template #cardBack>
-      <div class="border border-dark border-3 border-opacity-75 rounded p-3 card-back" [ngStyle]="style">
+      <div class="border border-dark border-3 border-opacity-75 rounded p-3 card-back" [ngStyle]="style"
+        (click)="rotated = !rotated">
         <p innerHTML="{{ backText1 }}" class="text-card"></p>
         <img class="img-fluid w-100" [src]="backImage" [alt]="backAltText" />
         <p innerHTML="{{ backText2 }}" class="text-card"></p>

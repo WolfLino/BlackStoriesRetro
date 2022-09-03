@@ -4,7 +4,7 @@
     <li class="list-group-item border-0 bg-transparent" *ngFor="let card of cards">
       <app-card-game #card width="400px" height="550px" [altText]="card.altImageText" [frontImage]="card.imagePath"
         [title]="card.title" [description]="card.description" [hideDescription]="true" [canRotate]="false"
-        [canZoom]="true" (click)="navigate(card)"></app-card-game>
+        [canZoom]="true" (click)="navigate(card)" [canStretch]="false"></app-card-game>
     </li>
   </ul>
 </div>

@@ -4,7 +4,7 @@
     <app-card-game *ngIf="card !== null" [frontImage]="card?.imagePath" [altText]="card?.altImageText"
       [title]="card?.title" description="{{ card?.description }}" [hideDescription]="false" height="600px" width="400px"
       [canRotate]="true" [canZoom]="false" [revealBack]="reveal" [backImage]="card?.backImagePath"
-      [backText1]="card?.backText1" [backText2]="card?.backText2"></app-card-game>
+      [backText1]="card?.backText1" [backText2]="card?.backText2" [canStretch]="true"></app-card-game>
   </div>
   <div class="form-check form-switch">
     <input class="form-check-input" type="checkbox" role="switch" [value]="reveal" (change)="reveal = !reveal"

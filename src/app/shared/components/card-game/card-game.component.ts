@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-card-game',
@@ -21,8 +21,10 @@ export class CardGameComponent implements OnInit {
   @Input() backText2?: string;
   @Input() backImage?: string;
   @Input() backAltText?: string;
+  @Input() canStretch = true;
 
   rotated: boolean = false;
+  isStretched: boolean = false;
   style = {
     width: `calc(100% - ${this.padding} - ${this.padding})`,
     height: `calc(100% - ${this.padding} - ${this.padding})`,
@@ -36,4 +38,6 @@ export class CardGameComponent implements OnInit {
       height: `calc(100% - ${this.padding} - ${this.padding})`,
     };
   }
+
+  applyZoom() {}
 }

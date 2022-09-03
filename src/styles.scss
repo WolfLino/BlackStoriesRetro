@@ -5,3 +5,7 @@
   src: local("BellySansCondensed"),
     url(./assets/fonts/BellySansCondensed.ttf) format("truetype");
 }
+
+h1, h2, h3, h4 {
+  font-family: "BellySansCondensed", Arial, Helvetica, sans-serif;
+}
