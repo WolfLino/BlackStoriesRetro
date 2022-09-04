@@ -59,8 +59,14 @@
   position: absolute;
   bottom: 0;
   right: 0;
+  height: 1rem;
+  width: 1rem;
   z-index: 1000;
+  border: none;
   background-color: transparent;
+  background-image: url("../../../../assets/images/expand.png");
+  background-size: 1rem 1rem;
+  background-repeat: no-repeat;
 }
 
 .stretch {

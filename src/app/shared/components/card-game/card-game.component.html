@@ -1,7 +1,7 @@
 <div class="custom-card" [ngStyle]="{ height: height, width: width }"
   [ngClass]="{ 'rotate-card': rotated && canRotate, zoom: canZoom && !isStretched, stretch: isStretched }">
   <div class="card-inner rounded" [ngStyle]="{ padding: padding }">
-    <button *ngIf="canStretch" class="zoom-btn card-front" (click)="isStretched = !isStretched">zoom</button>
+    <button *ngIf="canStretch" class="zoom-btn card-front" (click)="isStretched = !isStretched"></button>
     <div class="border border-dark border-3 border-opacity-75 rounded p-3 card-front" [ngStyle]="style"
       (click)="rotated = !rotated">
       <h2 class="fw-bold title">{{ title }}</h2>
