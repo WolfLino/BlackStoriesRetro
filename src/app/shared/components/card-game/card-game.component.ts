@@ -22,9 +22,9 @@ export class CardGameComponent implements OnInit {
   @Input() backImage?: string;
   @Input() backAltText?: string;
   @Input() canStretch = true;
+  @Input() isStretched: boolean = false;
 
   rotated: boolean = false;
-  isStretched: boolean = false;
   style = {
     width: `calc(100% - ${this.padding} - ${this.padding})`,
     height: `calc(100% - ${this.padding} - ${this.padding})`,

@@ -1,7 +1,7 @@
-<div class="d-flex flex-column">
+<div class="d-flex flex-column" (click)="setZoom()">
   <h1 class="text-center mb-4">Como isso aconteceu?</h1>
   <div class="w-100 justify-content-center d-flex">
-    <app-card-game *ngIf="card !== null" [frontImage]="card?.imagePath" [altText]="card?.altImageText"
+    <app-card-game *ngIf="card !== null" #currentCard [frontImage]="card?.imagePath" [altText]="card?.altImageText"
       [title]="card?.title" description="{{ card?.description }}" [hideDescription]="false" height="600px" width="400px"
       [canRotate]="true" [canZoom]="false" [revealBack]="reveal" [backImage]="card?.backImagePath"
       [backText1]="card?.backText1" [backText2]="card?.backText2" [canStretch]="true"></app-card-game>
