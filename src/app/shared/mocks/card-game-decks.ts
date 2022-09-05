@@ -10,7 +10,7 @@ export class CardGameDecks {
       imagePath: 'assets/cards/Card4.png',
       backImagePath: 'assets/cards/Card4.png',
       backText2:
-        'Os cinco homens eram policiais e eles tinham um mandado de presão de entrar na casa do mafioso e pegar todo o seu dinheiro. Após planejar a operação, eles prenderam o dono da casa.',
+        'Os cinco homens eram policiais e eles tinham um mandado de prisão de entrar na casa do mafioso e pegar todo o seu dinheiro. Após planejar a operação, eles prenderam o dono da casa.',
     },
     {
       id: 5,
